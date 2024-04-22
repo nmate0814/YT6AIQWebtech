@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html LANG="HU">
+    <HEAD>
+        <TITLE>JS objektumot konvertálja JSON Text.</TITLE>
+        <meta charset="UTF-8">
+    </HEAD>
+    <BODY>
+        <h2>JS objektumot konvertálja JSON Text.</h2>
+
+        <p id="write"></p>
+           <script>            
+            var obj1 = {nev:"György", iranyitoszam:1111, város:"Győr", egyetem:"Miskolc"};
+            var obj = JSON.stringify(obj1);
+            document.getElementById("write").innerHTML = obj;
+           </script> 
+    </BODY>
+</html>

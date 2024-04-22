@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="HU">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Audió - zene, hang - lejátszása_YT6AIQ</h1>
+    </header>
+
+    <audio id="audio" src="jazzy.mp3" controls></audio><br><br>
+    <button id="playPauseButton">Lejátszás / Szünet</button>
+    <button id="positiveEffectButton">Pozitív</button>
+    <button id="negativeEffectButton">Negatív</button><br><br>
+    <button id="muteButton">Néma</button>
+    <button id="volumeDownButton">Halk</button>
+    <button id="volumeUpButton">Hangos</button>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <button id="slowMotionButton">Nagyon lassú</button>
+    <button id="slowButton">Lassú</button>
+    <button id="normalSpeedButton">Normál</button>
+    <button id="fastButton">Gyorsabb</button>
+    <button id="fastMotionButton">Nagyon gyors</button><br><br>   
+    <button id="jumpButton">Ugrás 1.5 perchez</button><br><br>
+    
+    <footer>
+        <hr align="left" width="400px"><br><br>
+    </footer>
+
+    <strong>Forrás:</strong><br><br>
+    <a href="https://www.w3schools.com/html/html5_audio.asp">https://www.w3schools.com/html/html5_audio.asp</a>
+    <script>
+        const audio = document.getElementById('audio');
+
+        // Vezérlés: lejátszás / szünet
+        document.getElementById('playPauseButton').addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                status.innerText = "Státusz: Lejátszás";
+            } else {
+                audio.pause();
+                status.innerText = "Státusz: Szünet";
+            }
+        });
+
+        // Hangerő: néma, halk, hangos
+        document.getElementById('muteButton').addEventListener('click', () => {
+            audio.muted = !audio.muted;
+        });
+
+        document.getElementById('volumeDownButton').addEventListener('click', () => {
+            if (audio.volume >= 0.1) {
+                audio.volume -= 0.1;
+            }
+        });
+
+        document.getElementById('volumeUpButton').addEventListener('click', () => {
+            if (audio.volume <= 0.9) {
+                audio.volume += 0.1;
+            }
+        });
+
+        // Sebesség: nagyon lassú, lassú, normál, gyorsabb, nagyon gyors
+        document.getElementById('slowMotionButton').addEventListener('click', () => {
+            audio.playbackRate = 0.5;
+        });
+
+        document.getElementById('slowButton').addEventListener('click', () => {
+            audio.playbackRate = 0.75;
+        });
+
+        document.getElementById('normalSpeedButton').addEventListener('click', () => {
+            audio.playbackRate = 1;
+        });
+
+        document.getElementById('fastButton').addEventListener('click', () => {
+            audio.playbackRate = 1.25;
+        });
+
+        document.getElementById('fastMotionButton').addEventListener('click', () => {
+            audio.playbackRate = 1.5;
+        });
+
+        // Pozitív és negatív effektek
+        document.getElementById('positiveEffectButton').addEventListener('click', () => {
+            const positiveEffect = new Audio('yes.mp3');
+            positiveEffect.play();
+        });
+
+        document.getElementById('negativeEffectButton').addEventListener('click', () => {
+            const negativeEffect = new Audio('no.mp3');
+            negativeEffect.play();
+        });
+
+        // Ugrás másfél perchez
+        document.getElementById('jumpButton').addEventListener('click', () => {
+            audio.currentTime += 90; // 90 másodperc = 1.5 perc
+        });
+
+        // Információs ablak a zeneszám végén
+        audio.addEventListener('ended', () => {
+            alert('VÉGE');
+        });
+
+        // Befejeződött-e, audio hossza (mp), jelenlegi pozíció
+        function displayInfo() {
+            alert(`Befejeződött-e: ${audio.ended}\nAudio hossza (mp): ${audio.duration}\nJelenlegi pozíció: ${audio.currentTime}`);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+
+
+
+</head>
+
+<body>
+
+    <video src="video.mp4" id="video" width="420px" controls></video><br><br>
+    <button id="playButton">Indítás</button>
+    <button id="pauseButton">Leállítás</button>
+    <button id="toggleButton">Indítás / Leállítás</button>
+    <br><br>
+
+    <button id="muteButton">Néma</button>
+    <button id="volumeDownButton">Halk</button>
+    <button id="volumeUpButton">Hangos</button>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <button id="slowMotionButton">Nagyon lassú</button>
+    <button id="slowButton">Lassú</button>
+    <button id="normalSpeedButton">Normál</button>
+    <button id="fastButton">Gyorsabb</button>
+    <button id="fastMotionButton">Nagyon gyors</button>
+    <br><br>
+
+
+    <button id="smallButton">Kicsi</button>
+    <button id="normalSizeButton">Normál</button>
+    <button id="largeButton">Nagy</button>
+
+    &nbsp;&nbsp;&nbsp;
+
+    <button id="endedButton">Befejeződött-e</button>
+    <button id="durationButton">Videó hossza (mp)</button>
+    <button id="currentTimeButton">Jelenlegi pozíció</button>
+
+    <script>
+        const video = document.getElementById('video');
+
+        // Vezérlés: indítás, leállítás, indítás / leállítás
+        document.getElementById('playButton').addEventListener('click', () => {
+            video.play();
+        });
+
+        document.getElementById('pauseButton').addEventListener('click', () => {
+            video.pause();
+        });
+
+        document.getElementById('toggleButton').addEventListener('click', () => {
+            if (video.paused) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        });
+
+        // Hangerő: néma, halk, hangos
+        document.getElementById('muteButton').addEventListener('click', () => {
+            video.muted = !video.muted;
+        });
+
+        document.getElementById('volumeDownButton').addEventListener('click', () => {
+            if (video.volume >= 0.1) {
+                video.volume -= 0.1;
+            }
+        });
+
+        document.getElementById('volumeUpButton').addEventListener('click', () => {
+            if (video.volume <= 0.9) {
+                video.volume += 0.1;
+            }
+        });
+
+        document.getElementById('slowMotionButton').addEventListener('click', () => {
+            video.playbackRate = 0.5;
+        });
+
+        document.getElementById('slowButton').addEventListener('click', () => {
+            video.playbackRate = 0.75;
+        });
+
+        document.getElementById('normalSpeedButton').addEventListener('click', () => {
+            video.playbackRate = 1;
+        });
+
+        document.getElementById('fastButton').addEventListener('click', () => {
+            video.playbackRate = 1.25;
+        });
+
+        document.getElementById('fastMotionButton').addEventListener('click', () => {
+            video.playbackRate = 1.5;
+        });
+
+        document.getElementById('endedButton').addEventListener('click', () => {
+            alert(`A videó befejeződött: ${video.ended}`);
+        });
+
+        document.getElementById('durationButton').addEventListener('click', () => {
+            alert(`A videó hossza: ${video.duration} mp`);
+        });
+
+        document.getElementById('currentTimeButton').addEventListener('click', () => {
+            alert(`Jelenlegi pozíció: ${video.currentTime} mp`);
+        });
+    </script>
+</body>
+</html>

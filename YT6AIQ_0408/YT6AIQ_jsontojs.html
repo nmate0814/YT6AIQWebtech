@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Könyvek megjelenítése</title>
+</head>
+<body>
+<h1>Könyvek</h1>
+
+<div id="bookList"></div>
+
+<script>
+
+const jsonData = `{
+  "konyvek": [
+    {
+      "szerzo": "Nyékyné Dr. Gaizler Judit",
+      "cim": "Java 2 I-II. - Útikalauz programozóknak 5.0",
+      "kiadas_eve": 2009
+    },
+    {
+      "szerzo": "Reiter István",
+      "cim": "C# programozás lépésről lépésre",
+      "kiadas_eve": 2018
+    }
+  ]
+}`;
+
+
+const data = JSON.parse(jsonData);
+
+
+const bookListContainer = document.getElementById('bookList');
+const bookList = data.konyvek;
+
+bookList.forEach(book => {
+  const bookDiv = document.createElement('div');
+  bookDiv.innerHTML = `
+    <p><strong>Szerző:</strong> ${book.szerzo}</p>
+    <p><strong>Cím:</strong> ${book.cim}</p>
+    <p><strong>Kiadás éve:</strong> ${book.kiadas_eve}</p>
+  `;
+  bookListContainer.appendChild(bookDiv);
+});
+</script>
+
+</body>
+</html>

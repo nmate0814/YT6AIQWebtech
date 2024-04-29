@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuerry - Ajax</title>
+    <script src="jquery-3.7.1.min.js"></script>
+   
+    <style>
+      div {
+        text-align: left;
+        background-color: lightgray;
+        width: 400px;
+        font-family: "Courier New", Courier, monospace;
+        font: size 20px;
+      }
+    </style>
+
+    <script>    
+         $(document).ready(function() {
+             $("button:contains(Adatok betöltése").click(function(){
+                 $.getJSON('YT6AIQ.orarend.json', function(data){
+                    $('#stg').html('<h2>MISKOLCI EGYETEM</h2>');
+                    $('#stg').append('<p><b>Cím: </b>' + data.Cim.Utca + ' ' + data.Cim.Város + ' ' + data.Cim.Irányítószám);
+                 })
+                })   
+         });     
+     </script>
+     
+  </head>
+
+  <body>
+    <h1>jQuery - AJAK feladat</h1>
+    <h3>Kattintson az Adatok betöltése gombra</h3>
+    <div id="stg">Terület</p>
+    <button>Adatok betöltése</button>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+    "NM_orarend": {
+        "Cím": {
+            "Utca": "Egyetemváros",
+            "Város": "Miskolc",
+            "Irányítószám": "1021"
+        },
+
+    "Telefonszám": [
+            {
+                "type": "Vezetékes:",
+                "number": "0646 555-123"
+            },
+            {
+                "type": "Mobil:",
+                "number": "0670 555-4567"
+            }
+        ],
+    
+    "kurzus": [
+            {
+                "kurzusnev": "Webtechnológia gyakorlat",
+                "idopont": {
+                    "nap": "Hétfő",
+                    "tol": 14,
+                    "ig": 16
+                },
+                "helyszin": "Inf/103",
+                "oktato": "Dr. Bednarik László",
+                "szak": "PTI, MI"
+            }
+        ]
+    }
+}

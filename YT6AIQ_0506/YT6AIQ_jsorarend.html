@@ -16,6 +16,11 @@
         font-family: "Courier New", Courier, monospace;
         font: size 20px;
       }
+
+      hr{
+        background-color:green;
+        height: 3px;
+      }
     </style>
 
     <script>    
@@ -24,13 +29,14 @@
                  $.getJSON('YT6AIQ_orarend.json', function(data){
                     $('div').html('<h2>MISKOLCI EGYETEM</h2>');
                     $('div').append('<b>Cím:</b> ' +data.cim.code + ' ' + data.cim.city + ' ' + data.cim.street +'</p>');
-                    $('div').append('<b>Telefonszámok:</b><br><ul><li>' + data.phone_number.type + ' ' + data.phone_number.number + '</li> <li>' + data.phone_number.type + ' ' + data.phone_number.number +'</li></ul></p>');
+                    $('div').append('<b>Telefonszámok:</b><br><ul><li>' + data.phone_number[0].type + ' ' + data.phone_number[0].number + '</li> <li>' + data.phone_number[1].type + ' ' + data.phone_number[1].number +'</li></ul></p>');
                     $('div').append('<h2>NM Órarend 2024 Tavasz - részlet</h2>');    
                     $('div').append('<p><b>Kurzusnév: </b>'+ data.kurzusnev +'</p>');   
                     $('div').append('<p><b>Oktató: </b>'+ data.oktato +'</p>');
                     $('div').append('<p><b>Szak: </b>'+ data.szak +'</p>');
                     $('div').append('<p><b>Időpont: </b><br> Nap: '+ data.idopont.nap + '<br> Tól: '+ data.idopont.tol + ' ' + '<br> Ig: ' + data.idopont.ig + '</p>');            
                     $('div').append('<p><b>Helyszín: </b>'+ data.helyszin +'</p>');
+                    $('div').append('<hr>')
                   })
                 })   
          });     
@@ -44,8 +50,7 @@
     <div>
       Terület
     </div>
-    <br><button>Adatok betöltése</button>
-
-
+    <br>
+    <button>Adatok betöltése</button>
   </body>
 </html>

@@ -30,7 +30,6 @@
     <script>
         const audio = document.getElementById('audio');
 
-        // Vezérlés: lejátszás / szünet
         document.getElementById('playPauseButton').addEventListener('click', () => {
             if (audio.paused) {
                 audio.play();
@@ -41,7 +40,6 @@
             }
         });
 
-        // Hangerő: néma, halk, hangos
         document.getElementById('muteButton').addEventListener('click', () => {
             audio.muted = !audio.muted;
         });
@@ -58,7 +56,6 @@
             }
         });
 
-        // Sebesség: nagyon lassú, lassú, normál, gyorsabb, nagyon gyors
         document.getElementById('slowMotionButton').addEventListener('click', () => {
             audio.playbackRate = 0.5;
         });
@@ -79,7 +76,6 @@
             audio.playbackRate = 1.5;
         });
 
-        // Pozitív és negatív effektek
         document.getElementById('positiveEffectButton').addEventListener('click', () => {
             const positiveEffect = new Audio('yes.mp3');
             positiveEffect.play();
@@ -90,17 +86,14 @@
             negativeEffect.play();
         });
 
-        // Ugrás másfél perchez
         document.getElementById('jumpButton').addEventListener('click', () => {
-            audio.currentTime += 90; // 90 másodperc = 1.5 perc
+            audio.currentTime += 90; 
         });
 
-        // Információs ablak a zeneszám végén
         audio.addEventListener('ended', () => {
             alert('VÉGE');
         });
 
-        // Befejeződött-e, audio hossza (mp), jelenlegi pozíció
         function displayInfo() {
             alert(`Befejeződött-e: ${audio.ended}\nAudio hossza (mp): ${audio.duration}\nJelenlegi pozíció: ${audio.currentTime}`);
         }

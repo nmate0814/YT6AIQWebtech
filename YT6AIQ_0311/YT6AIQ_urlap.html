@@ -5,31 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Űrlap</title>
 <style>
-    body{
-        background-color: aqua;
-    }
     p{
-        text-align: right;
+      text-align: right;
+        margin-right: 1350px;
     }
   header, footer {
-    background-color: aqua;
     color: black;
     padding: 10px;
-    text-align: left;
   }
-  section {
-    width: 80%;
-  }
+
   label {
     display: block;
     margin-bottom: 10px;
   }
   input[type="text"], input[type="number"], input[type="range"] {
-    width: 100%;
+    width: 50%;
 
   }
   input[type="submit"],input[type="button"] {
     cursor: pointer;
+  }
+  div{
+    background-color: aqua;
+    width: 550px;
+    height: 420px;
+    border-radius: 5px;
   }
 </style>
 </head>
@@ -39,7 +39,7 @@
   <h1>HTML5 űrlap - YT6AIQ</h1>
 </header>
 
-<section>
+  <div>
   <form action="#" method="post">
     <label for="name">Név:</label>
     <input type="text" id="name" name="name" required pattern="[A-Za-z\s]{3,}">
@@ -63,11 +63,11 @@
     
     <label for="confidence">Önbizalom:</label>
     <input type="range" id="confidence" name="confidence" min="0" max="100" step="1">
-    
+    <br>
     <input type="submit" value="Elküld">
     <input type="button" value="Elküld ellenőrzés nélkül">
   </form>
-</section>
+</div>
 
 <footer>
   <p>Forrás: <a href="https://html5doctor.com/html5-forms-introduction-and-new-attributes/" target="_blank">https://html5doctor.com/html5-forms-introduction-and-new-attributes/</a></p>

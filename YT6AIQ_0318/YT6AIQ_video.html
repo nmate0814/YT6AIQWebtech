@@ -43,7 +43,6 @@
     <script>
         const video = document.getElementById('video');
 
-        // Vezérlés: indítás, leállítás, indítás / leállítás
         document.getElementById('playButton').addEventListener('click', () => {
             video.play();
         });
@@ -60,7 +59,6 @@
             }
         });
 
-        // Hangerő: néma, halk, hangos
         document.getElementById('muteButton').addEventListener('click', () => {
             video.muted = !video.muted;
         });

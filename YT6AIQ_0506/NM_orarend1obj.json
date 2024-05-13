@@ -1,0 +1,54 @@
+{
+    "kurzusnev":
+    [
+        {
+            "course":"Adatkezelés XML környezetben"
+        }
+    ],
+    "oktato":
+    [
+        {
+            "teacher":"Dr. Bednarik László"
+        }
+    ],
+    "szak":
+    [
+        {
+            "szaka":"PTI, MI"
+        }
+    ],
+    "idopont":
+    [
+        {
+            "nap": "Kedd",
+            "tol": "14:00",
+            "ig": "16:00"
+        }
+    ],
+    "helyszin":
+    [
+        {
+            "room":"Inf/103"
+        }
+    ],
+    "cim":
+    [
+        {
+        "street": "Egyetemváros",
+         "city": "Miskolc",
+         "code": "1021"
+        }
+    ],
+    "phone_number":
+    [
+        {
+            "type": "Vezetékes:",
+            "number": "0646 555-123"
+        },
+        {
+            "type": "Mobil:",
+            "number": "0670 555-4567"
+        }
+    ]   
+}
+        

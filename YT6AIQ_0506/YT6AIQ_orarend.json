@@ -1,20 +1,146 @@
 {
-    "kurzusnev":"Adatkezelés XML környezetben",
-    "oktato":"Dr. Bednarik László",
-    "szak":"PTI, MI",
+    "kurzusnev":
+    [
+        {
+            "course":"Adatkezelés XML környezetben"
+        },
+        {
+            "course": "Fizika"
+        },
+        {
+            "course": "Analízis II"
+        },
+        {
+            "course": "C# programozás"
+        },
+        {
+            "course": "Operációs rendszerek"
+        },
+        {
+            "course": "Diszkrét matematika"
+        },
+        {
+            "course": "Szoftver technológiák"
+        }
+    ],
+    "oktato":
+    [
+        {
+            "teacher":"Dr. Bednarik László"
+        },
+        {
+            "teacher": "Dr. Pszota Gábor"
+        },
+        {
+            "teacher": "Lengyelné Dr. Szilágyi Szilvia"
+        },
+        {
+            "teacher":  "Smid László"
+        },
+        {
+            "teacher":  "Dr. Baksa Attila"
+        },
+        {
+            "teacher": "Dr. Radeleczki Sándor"
+        },
+        {
+            "teacher": "Tompa Tamás"
+        }
+    ],
+    "szak":
+    [
+        {
+            "szaka":"PTI, MI"
+        },
+        {
+            "szaka":"Kompakt röngtenforrások"
+        },
+        {
+            "szaka":"Hálók és részbenrendezett halmazzok"
+        },
+        {
+            "szaka":"Logisztikai rendszerek szimulációja"
+        },
+        {
+            "szaka":"Számítógépes grafika, Súrlódásos érintkezés"
+        },
+        {
+            "szaka":"Hálók és részbenrendezett halmazzok"
+        },
+        {
+            "szaka": "fuzzy szabályalapú gépi tanulási módszerek"
+        }
+    ],
     "idopont":
-    {
-        "nap": "Kedd",
-        "tol": "14:00",
-        "ig": "16:00"
-    },
-    "helyszin":"Inf/103",
+    [
+        {
+            "nap": "Kedd",
+            "tol": "14:00",
+            "ig": "16:00"
+        },
+        {
+            "nap": "Hétfő",
+            "tol": "12:00",
+            "ig": "14:00"
+        },
+        {
+            "nap": "Kedd",
+            "tol": "8:00",
+            "ig": "10:00"
+        },
+        {
+            "nap": "Kedd",
+            "tol": "10:00",
+            "ig": "12:00"
+        },
+        {
+            "nap": "Szerda",
+            "tol": "12:00",
+            "ig": "14:00"
+        },
+        {
+            "nap": "Csütörtök",
+            "tol": "10:00",
+            "ig": "14:00"
+        },
+        {
+            "nap": "Szerda",
+            "tol": "8:00",
+            "ig": "10:00"
+        }
+    ],
+    "helyszin":
+    [
+        {
+            "room":"Inf/103"
+        },
+        {
+            "room":"XXX. ea"
+        },
+        {
+            "room":"XXXIII. ea"
+        },
+        {
+            "room":"Inf/103"
+        },
+        {
+            "room":"XXXII. ea"
+        },
+        {
+            "room":"XXX. ea"
+        },
+        {
+            "room":"XXX. ea"
+        }
+    ],
     "cim":
-    {
+    [
+        {
         "street": "Egyetemváros",
-        "city": "Miskolc",
-        "code": "1021"
-    },
+         "city": "Miskolc",
+         "code": "1021"
+        }
+    ],
     "phone_number":
     [
         {
